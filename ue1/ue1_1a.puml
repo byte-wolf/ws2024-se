@@ -5,7 +5,7 @@ class Restaurant {
     adresse: String
 }
 
-Restaurant "1" *-- "0..*" Reservierung
+Restaurant "1" -- "0..*" Reservierung : Test
 
 class Reservierung {
     reservierungAm: Date
