@@ -1,0 +1,21 @@
+@startuml ue1
+
+class Restaurant {
+    name: String
+    adresse: String
+}
+
+Restaurant "1" *-- "0..*" Reservierung
+
+class Reservierung {
+    reservierungAm: Date
+    anzahlGaeste: integer
+}
+
+Reservierung "0..*" --o "1" Gast
+
+class Gast {
+    gaesteId: integer
+}
+
+@enduml

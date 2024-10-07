@@ -1,0 +1,26 @@
+@startuml ue1
+
+class Produkt {
+    bezeichnung: String
+    preis: double
+}
+
+Produkt "1" *-- "0..*" Kauf
+
+class Kauf {
+    reservierungAm: Date
+    anzahlGaeste: integer
+}
+
+Kauf "0..*" --o "1" Kunde
+
+class Kunde {
+    gaesteId: integer
+}
+
+class Bewertung {
+    reservierungAm: Date
+    anzahlGaeste: integer
+}
+
+@enduml
